@@ -1,0 +1,9 @@
+@media (max-width:450) {
+    .card {
+        width: 500px;
+    }
+    .button {
+        width: 20px;
+    }
+}
+
