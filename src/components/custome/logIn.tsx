@@ -59,6 +59,7 @@ const LogIn = () => {
       window.location.reload();
     },
     onError: () => {
+      setSendData(false);
       setLogInError(true);
     },
   });

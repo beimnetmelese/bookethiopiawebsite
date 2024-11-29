@@ -85,7 +85,7 @@ const Register = () => {
     onMutate: () => {
       setSendData(true);
     },
-    onSuccess: (response, sendData) => {
+    onSuccess: (_, sendData) => {
       setEmailError(false);
       setPhoneError(false);
       setUsernameError(false);
@@ -105,7 +105,7 @@ const Register = () => {
     },
     onError: (error: any) => {
       const errorData = error.response?.data;
-
+      setSendData(false);
       if (errorData?.username) {
         setUsernameError(true);
         setUsernameErrorDetail(errorData?.username);
