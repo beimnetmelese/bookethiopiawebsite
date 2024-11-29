@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import { Analytics } from "@vercel/analytics/next";
 import { RouterProvider } from "react-router-dom";
 import route from "./components/router/router.tsx";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <ChakraProvider theme={theme}>
       <QueryClientProvider client={query}>
         <RouterProvider router={route} />
+        <Analytics />
       </QueryClientProvider>
     </ChakraProvider>
   </React.StrictMode>
