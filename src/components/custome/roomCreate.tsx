@@ -70,6 +70,9 @@ const RoomCreate = () => {
       setSendData(false);
       onOpen2();
     },
+    onError: () => {
+      setSendData(false);
+    },
   });
   return (
     <>

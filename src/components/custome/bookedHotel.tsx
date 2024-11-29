@@ -74,6 +74,9 @@ function BookedHotel() {
       setSendData(false);
       window.location.reload();
     },
+    onError: () => {
+      setSendData(false);
+    },
   });
   return (
     <>

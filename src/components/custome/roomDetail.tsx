@@ -151,6 +151,9 @@ function RoomDetail() {
       setStar(0);
       window.location.reload();
     },
+    onError: () => {
+      setSendData(false);
+    },
   });
 
   const sendForm2 = useMutation({
@@ -170,6 +173,9 @@ function RoomDetail() {
       onClose();
       reset();
       onOpen2();
+    },
+    onError: () => {
+      setSendData2(false);
     },
   });
   const isRoomRateAllowed = () => {
@@ -507,6 +513,7 @@ function RoomDetail() {
                   const roomSize = res.data[0].room_size;
                   if (roomSize <= 0) {
                     setBookError(true);
+                    setSendData2(false);
                   } else {
                     sendForm2.mutate({ date_booked: roomDate });
                   }

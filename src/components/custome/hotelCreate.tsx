@@ -73,6 +73,9 @@ const HotelCreate = () => {
       reset();
       onOpen2();
     },
+    onError: () => {
+      setSendData(false);
+    },
   });
   return (
     <>
