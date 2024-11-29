@@ -526,6 +526,7 @@ function RoomDetail() {
                   borderColor={"black"}
                   color={"balck"}
                   ref={ref}
+                  placeholder="yyyy-mm-dd"
                   type="date"
                   sx={{
                     "::-webkit-calendar-picker-indicator": {
